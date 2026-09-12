@@ -3,6 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-700061364"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-700061364');
+  </script>
+
+  <!-- Google Ads Conversion Event Snippet (Tracked on CTA Clicks) -->
+  <script>
+    function gtag_report_conversion(url) {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-700061364/X9O0CMPbgfUcELSt6M0C',
+            'value': 1.0,
+            'currency': 'USD'
+        });
+      }
+      return true;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var ctaSelectors = [
+        'a[href*="bookvikaspatel.setmore.com"]',
+        'a[href*="docs.google.com/forms"]',
+        'a[href^="mailto:"]'
+      ];
+      document.querySelectorAll(ctaSelectors.join(', ')).forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          gtag_report_conversion();
+        });
+      });
+    });
+  </script>
   
   <!-- High-Intent Google Search & ASO Title -->
   <title>Vikas Patel | Senior Unity Engineer & Consultant – AdMob, Store Publishing, ASO & Code Reviews</title>
