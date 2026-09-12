@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://vikaspatel-unity.github.io/consultant-page-html/sitemap.xml
