@@ -30,6 +30,7 @@ img { max-width: 100%; border-radius: var(--radius); }
 
 /* Layout */
 .shell { max-width: var(--max-width); margin: 0 auto; padding: 0 22px 80px; }
+section, .card[id], .tab-panel, [id] { scroll-margin-top: 85px; }
 section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 42px; margin: 34px 0; box-shadow: var(--shadow-soft); opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
 section.visible { opacity: 1; transform: translateY(0); }
 h1, h2, h3, h4 { margin: 0; font-weight: 700; }
@@ -177,6 +178,19 @@ button, .btn, .pill, .tab-button, input[type="button"], input[type="submit"] {
   color: var(--muted);
   border: 1px solid var(--border);
 }
+.card-cta {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.btn-card {
+  width: 100%;
+  padding: 11px 16px;
+  font-size: 0.88rem;
+  border-radius: 10px;
+  text-align: center;
+  gap: 8px;
+}
 .badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(245,194,104,0.16); color: #f5c268; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; }
 .list { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
 .list li { margin: 8px 0; }
@@ -272,6 +286,38 @@ button, .btn, .pill, .tab-button, input[type="button"], input[type="submit"] {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+}
+.tab-cta-banner {
+  margin-top: 22px;
+  padding: 18px 22px;
+  background: rgba(139, 92, 246, 0.09);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.tab-cta-text strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.tab-cta-text span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+@media (max-width: 720px) {
+  .tab-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tab-cta-banner .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Contact Form */
