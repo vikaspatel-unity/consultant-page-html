@@ -246,8 +246,13 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <div class="brand">Vikas Patel <span>Senior Unity Engineer</span></div>
-      <div class="nav-links">
+      <a href="#" class="brand">Vikas Patel <span class="brand-tagline">| Mobile Game & App Consultant</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="#services">Services</a>
         <a href="#deep-dive">Capabilities</a>
         <a href="#portfolio">Case Studies</a>
@@ -292,7 +297,7 @@
         </div>
       </div>
 
-      <div class="card card-featured">
+      <div class="card">
         <h3>Core Focus & What I Solve</h3>
         <p style="margin-bottom: 12px; font-size: 0.95rem;">Senior technical execution and consulting to eliminate blockers across your entire roadmap:</p>
         <ul class="list">
@@ -317,210 +322,180 @@
       <h2>High-impact solutions to build, launch, monetize, and scale.</h2>
       <p style="max-width: 820px; font-size: 1.05rem;">Specialized consultancy engineered to eliminate store rejection friction, maximize ad monetization, unlock sustainable organic acquisition, and keep live apps rock solid.</p>
 
-      <div class="grid">
-        <!-- Service: Full-Cycle Game Development -->
-        <div class="card card-featured" id="gamedev">
-          <div class="card-header-row">
-            <div class="service-icon">🎮</div>
-            <span class="card-badge">Senior Unity Core</span>
-          </div>
-          <h3>Full-Cycle Game Development</h3>
-          <p>End-to-end Unity game programming from rapid prototyping and vertical slices to production multiplatform releases.</p>
-          <ul class="check-list">
-            <li><strong>Core Gameplay Loops & Mechanics:</strong> Responsive character controllers, combat systems, weapon feel, and progression hooks.</li>
-            <li><strong>Modular Scalable Architecture:</strong> ScriptableObject architectures, state machines, and decoupled event-driven systems.</li>
-            <li><strong>Physics & Game Feel:</strong> Micro-tuned physics, Cinemachine camera tuning, juice, screen shake, and polished particle feedback.</li>
-            <li><strong>Cross-Platform Deployment:</strong> Optimized production builds for Mobile (iOS/Android), PC (Steam), and XR/VR (Meta Quest).</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">Full Game Dev</span>
-            <span class="tag-item">Gameplay Systems</span>
-            <span class="tag-item">Rapid Prototyping</span>
-            <span class="tag-item">Cross-Platform</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for Game Development ↗</a>
-          </div>
-        </div>
+      <div class="slider-wrapper">
+        <button class="slider-nav-arrow prev" aria-label="Previous services" title="Previous Slide">❮</button>
+        <button class="slider-nav-arrow next" aria-label="Next services" title="Next Slide">❯</button>
 
-        <!-- Service: Unity Code Reviews & Architecture Audits -->
-        <div class="card card-featured" id="codereview">
-          <div class="card-header-row">
-            <div class="service-icon">🔍</div>
-            <span class="card-badge">Engineering Excellence</span>
-          </div>
-          <h3>Unity Code Review & Architecture Audits</h3>
-          <p>In-depth codebase audits to uncover hidden bottlenecks, eliminate technical debt, and establish scalable engineering standards.</p>
-          <ul class="check-list">
-            <li><strong>Architectural Health Check:</strong> Identifying tight coupling, monolithic singletons, spaghetti logic, and maintainability risks.</li>
-            <li><strong>Refactoring Roadmap:</strong> Step-by-step blueprint to untangle legacy code into modular, maintainable systems without breaking live features.</li>
-            <li><strong>Memory & Allocation Profiling:</strong> Pinpointing garbage collection spikes, boxing allocations, and unmanaged memory leaks.</li>
-            <li><strong>Team Enablement:</strong> Pull Request (PR) templates, coding conventions, and best-practice engineering playbooks for your team.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">Codebase Audit</span>
-            <span class="tag-item">Architecture Refactor</span>
-            <span class="tag-item">Tech Debt Cleanup</span>
-            <span class="tag-item">PR Review Standards</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for Code Audit ↗</a>
-          </div>
-        </div>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <!-- Service: Full-Cycle Game Development -->
+            <div class="slider-slide">
+              <div class="card" id="gamedev">
+                <div class="card-header-row">
+                  <div class="service-icon">🎮</div>
+                  <span class="card-badge">Senior Unity Core</span>
+                </div>
+                <h3>Full-Cycle Game Development</h3>
+                <p>End-to-end Unity game programming from rapid prototyping and vertical slices to production multiplatform releases.</p>
+                <ul class="check-list">
+                  <li><strong>Core Gameplay Loops & Mechanics:</strong> Responsive character controllers, combat systems, weapon feel, and progression hooks.</li>
+                  <li><strong>Modular Scalable Architecture:</strong> ScriptableObject architectures, state machines, and decoupled event-driven systems.</li>
+                  <li><strong>Physics & Game Feel:</strong> Micro-tuned physics, Cinemachine camera tuning, juice, screen shake, and polished particle feedback.</li>
+                  <li><strong>Cross-Platform Deployment:</strong> Optimized production builds for Mobile (iOS/Android), PC (Steam), and XR/VR (Meta Quest).</li>
+                </ul>
+                <div class="tag-list">
+                  <span class="tag-item">Full Game Dev</span>
+                  <span class="tag-item">Gameplay Systems</span>
+                  <span class="tag-item">Rapid Prototyping</span>
+                  <span class="tag-item">Cross-Platform</span>
+                </div>
+                <div class="card-cta">
+                  <a class="btn btn-card" href="#contact">Contact for Game Development ↗</a>
+                </div>
+              </div>
+            </div>
 
-        <!-- Pillar 1: AdMob Consultancy -->
-        <div class="card card-featured" id="admob">
-          <div class="card-header-row">
-            <div class="service-icon">💰</div>
-            <span class="card-badge">Core Pillar</span>
-          </div>
-          <h3>AdMob Consultancy & Monetization</h3>
-          <p>Maximize your mobile ad revenue while protecting account health through rock-solid architecture and strict policy compliance.</p>
-          <ul class="check-list">
-            <li><strong>Mediation & Real-Time Bidding:</strong> AdMob bidding integration with AppLovin MAX, Unity LevelPlay, and IronSource.</li>
-            <li><strong>eCPM & ARPDAU Optimization:</strong> High-yield placements for Rewarded Video, Interstitials, Native Ads, and App Open ads.</li>
-            <li><strong>Policy Compliance & Ad Limits Fix:</strong> Audit invalid traffic sources, eliminate ad serving limits, and safeguard your AdMob account.</li>
-            <li><strong>Privacy & Consent Frameworks:</strong> Full Google UMP (User Messaging Platform) GDPR/CCPA & Apple ATT setup.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">eCPM Growth</span>
-            <span class="tag-item">Mediation Bidding</span>
-            <span class="tag-item">Ad Limits Resolution</span>
-            <span class="tag-item">Google UMP Consent</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for AdMob & Ad Limits ↗</a>
-          </div>
-        </div>
+            <!-- Service: Unity Code Reviews & Architecture Audits -->
+            <div class="slider-slide">
+              <div class="card" id="codereview">
+                <div class="card-header-row">
+                  <div class="service-icon">🔍</div>
+                  <span class="card-badge">Engineering Excellence</span>
+                </div>
+                <h3>Unity Code Review & Architecture Audits</h3>
+                <p>In-depth codebase audits to uncover hidden bottlenecks, eliminate technical debt, and establish scalable engineering standards.</p>
+                <ul class="check-list">
+                  <li><strong>Architectural Health Check:</strong> Identifying tight coupling, monolithic singletons, spaghetti logic, and maintainability risks.</li>
+                  <li><strong>Refactoring Roadmap:</strong> Step-by-step blueprint to untangle legacy code into modular, maintainable systems without breaking live features.</li>
+                  <li><strong>Memory & Allocation Profiling:</strong> Pinpointing garbage collection spikes, boxing allocations, and unmanaged memory leaks.</li>
+                  <li><strong>Team Enablement:</strong> Pull Request (PR) templates, coding conventions, and best-practice engineering playbooks for your team.</li>
+                </ul>
+                <div class="tag-list">
+                  <span class="tag-item">Codebase Audit</span>
+                  <span class="tag-item">Architecture Refactor</span>
+                  <span class="tag-item">Tech Debt Cleanup</span>
+                  <span class="tag-item">PR Review Standards</span>
+                </div>
+                <div class="card-cta">
+                  <a class="btn btn-card" href="#contact">Contact for Code Audit ↗</a>
+                </div>
+              </div>
+            </div>
 
-        <!-- Pillar 2: App Store Publishing -->
-        <div class="card card-featured" id="appstore">
-          <div class="card-header-row">
-            <div class="service-icon">🍏</div>
-            <span class="card-badge">Core Pillar</span>
-          </div>
-          <h3>App Store Publishing</h3>
-          <p>Frictionless Apple App Store clearance from certificates and provisioning profiles to complex review rejection appeals.</p>
-          <ul class="check-list">
-            <li><strong>End-to-End Submission & TestFlight:</strong> Certificate generation, Bundle IDs, provisioning profiles, and automated TestFlight builds.</li>
-            <li><strong>Rejection Rescue:</strong> Resolving Guideline 4.3 (Design/Spam), 2.1 (App Completeness), and 5.1.1 (Privacy) rejections.</li>
-            <li><strong>Privacy Manifests:</strong> Comprehensive <code>PrivacyInfo.xcprivacy</code> creation and third-party SDK signature compliance.</li>
-            <li><strong>StoreKit & IAP Setup:</strong> Seamless integration of in-app purchases, subscriptions, and server receipt verification.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">App Store Connect</span>
-            <span class="tag-item">Rejection Recovery</span>
-            <span class="tag-item">Privacy Manifest</span>
-            <span class="tag-item">StoreKit IAP</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for App Store Publishing ↗</a>
-          </div>
-        </div>
+            <!-- Pillar 1: AdMob Consultancy -->
+            <div class="slider-slide">
+              <div class="card" id="admob">
+                <div class="card-header-row">
+                  <div class="service-icon">💰</div>
+                  <span class="card-badge">Core Pillar</span>
+                </div>
+                <h3>AdMob Consultancy & Monetization</h3>
+                <p>Maximize your mobile ad revenue while protecting account health through rock-solid architecture and strict policy compliance.</p>
+                <ul class="check-list">
+                  <li><strong>Mediation & Real-Time Bidding:</strong> AdMob bidding integration with AppLovin MAX, Unity LevelPlay, and IronSource.</li>
+                  <li><strong>eCPM & ARPDAU Optimization:</strong> High-yield placements for Rewarded Video, Interstitials, Native Ads, and App Open ads.</li>
+                  <li><strong>Policy Compliance & Ad Limits Fix:</strong> Audit invalid traffic sources, eliminate ad serving limits, and safeguard your AdMob account.</li>
+                  <li><strong>Privacy & Consent Frameworks:</strong> Full Google UMP (User Messaging Platform) GDPR/CCPA & Apple ATT setup.</li>
+                </ul>
+                <div class="tag-list">
+                  <span class="tag-item">eCPM Growth</span>
+                  <span class="tag-item">Mediation Bidding</span>
+                  <span class="tag-item">Ad Limits Resolution</span>
+                  <span class="tag-item">Google UMP Consent</span>
+                </div>
+                <div class="card-cta">
+                  <a class="btn btn-card" href="#contact">Contact for AdMob & Ad Limits ↗</a>
+                </div>
+              </div>
+            </div>
 
-        <!-- Pillar 3: Play Store Publishing -->
-        <div class="card card-featured" id="playstore">
-          <div class="card-header-row">
-            <div class="service-icon">🤖</div>
-            <span class="card-badge">Core Pillar</span>
-          </div>
-          <h3>Play Store Publishing</h3>
-          <p>Navigate Google Play’s strictest policies, satisfy testing mandates, and achieve stable production track rollouts.</p>
-          <ul class="check-list">
-            <li><strong>20-Tester Closed Testing:</strong> Complete coordination and execution to satisfy Google’s 20-tester / 14-day mandatory rule.</li>
-            <li><strong>Data Safety & Compliance Forms:</strong> Accurate data collection declarations, sensitive permission audits, and target API upgrades (Android 14/15).</li>
-            <li><strong>Release Pipeline Management:</strong> Internal, Closed, Open, and Staged Production rollouts with zero account penalties.</li>
-            <li><strong>Policy Violation Remediation:</strong> Unblocking rejected app bundles, resolving warnings, and filing winning appeals.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">Play Console</span>
-            <span class="tag-item">20-Tester Requirement</span>
-            <span class="tag-item">Data Safety Form</span>
-            <span class="tag-item">Target API 34+</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for Play Store & 20 Testers ↗</a>
-          </div>
-        </div>
+            <!-- Pillar 2: App Store Publishing -->
+            <div class="slider-slide">
+              <div class="card" id="appstore">
+                <div class="card-header-row">
+                  <div class="service-icon">🍏</div>
+                  <span class="card-badge">Core Pillar</span>
+                </div>
+                <h3>App Store Publishing</h3>
+                <p>Frictionless Apple App Store clearance from certificates and provisioning profiles to complex review rejection appeals.</p>
+                <ul class="check-list">
+                  <li><strong>End-to-End Submission & TestFlight:</strong> Certificate generation, Bundle IDs, provisioning profiles, and automated TestFlight builds.</li>
+                  <li><strong>Rejection Rescue:</strong> Resolving Guideline 4.3 (Design/Spam), 2.1 (App Completeness), and 5.1.1 (Privacy) rejections.</li>
+                  <li><strong>Privacy Manifests:</strong> Comprehensive <code>PrivacyInfo.xcprivacy</code> creation and third-party SDK signature compliance.</li>
+                  <li><strong>StoreKit & IAP Setup:</strong> Seamless integration of in-app purchases, subscriptions, and server receipt verification.</li>
+                </ul>
+                <div class="tag-list">
+                  <span class="tag-item">App Store Connect</span>
+                  <span class="tag-item">Rejection Recovery</span>
+                  <span class="tag-item">Privacy Manifest</span>
+                  <span class="tag-item">StoreKit IAP</span>
+                </div>
+                <div class="card-cta">
+                  <a class="btn btn-card" href="#contact">Contact for App Store Publishing ↗</a>
+                </div>
+              </div>
+            </div>
 
-        <!-- Pillar 4: Organic Growth & ASO -->
-        <div class="card card-featured" id="growth">
-          <div id="aso"></div>
-          <div class="card-header-row">
-            <div class="service-icon">📈</div>
-            <span class="card-badge">Core Pillar</span>
-          </div>
-          <h3>Organic Growth & ASO (App Store Optimization)</h3>
-          <p>Stop draining marketing budget on paid user acquisition alone. Turn your iOS & Android store pages into compounding organic download engines with data-driven ASO.</p>
-          <ul class="check-list">
-            <li><strong>Algorithmic Keyword Indexing:</strong> Comprehensive keyword research targeting high-volume, low-competition terms for Apple App Store (100-character field, subtitle) and Google Play (keyword density across Title, Short & Long description).</li>
-            <li><strong>Store Listing Experiments (A/B Testing):</strong> Statistical CRO experiments on Google Play Console and Apple Product Page Optimization (PPO) to maximize tap-to-install conversion.</li>
-            <li><strong>Conversion Rate Optimization (CRO):</strong> High-converting visual narratives, icon A/B testing, gameplay screenshots, and promo video thumbnails.</li>
-            <li><strong>Custom Product Pages (CPP) & Localization:</strong> Segmented Custom Product Pages and multi-language store metadata across US, UK, and global Tier-1 markets.</li>
-            <li><strong>Ratings & Review Acceleration:</strong> In-app smart review prompt funnels timed to player dopamine peaks, cultivating 4.5+ star social proof that elevates store algorithm rank.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">App Store Optimization (ASO)</span>
-            <span class="tag-item">Keyword Ranking</span>
-            <span class="tag-item">Google Play Experiments</span>
-            <span class="tag-item">Apple PPO & CPP</span>
-            <span class="tag-item">Conversion Rate (CRO)</span>
-            <span class="tag-item">Organic Installs</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for ASO & Organic Growth ↗</a>
-          </div>
-        </div>
+            <!-- Pillar 3: Play Store Publishing -->
+            <div class="slider-slide">
+              <div class="card" id="playstore">
+                <div class="card-header-row">
+                  <div class="service-icon">🤖</div>
+                  <span class="card-badge">Core Pillar</span>
+                </div>
+                <h3>Play Store Publishing</h3>
+                <p>Navigate Google Play’s strictest policies, satisfy testing mandates, and achieve stable production track rollouts.</p>
+                <ul class="check-list">
+                  <li><strong>20-Tester Closed Testing:</strong> Complete coordination and execution to satisfy Google’s 20-tester / 14-day mandatory rule.</li>
+                  <li><strong>Data Safety & Compliance Forms:</strong> Accurate data collection declarations, sensitive permission audits, and target API upgrades (Android 14/15).</li>
+                  <li><strong>Release Pipeline Management:</strong> Internal, Closed, Open, and Staged Production rollouts with zero account penalties.</li>
+                  <li><strong>Policy Violation Remediation:</strong> Unblocking rejected app bundles, resolving warnings, and filing winning appeals.</li>
+                </ul>
+                <div class="tag-list">
+                  <span class="tag-item">Play Console</span>
+                  <span class="tag-item">20-Tester Requirement</span>
+                  <span class="tag-item">Data Safety Form</span>
+                  <span class="tag-item">Target API 34+</span>
+                </div>
+                <div class="card-cta">
+                  <a class="btn btn-card" href="#contact">Contact for Play Store & 20 Testers ↗</a>
+                </div>
+              </div>
+            </div>
 
-        <!-- Pillar 5: Mobile Game/App Support -->
-        <div class="card card-featured" id="support">
-          <div class="card-header-row">
-            <div class="service-icon">🛠️</div>
-            <span class="card-badge">Core Pillar</span>
-          </div>
-          <h3>Mobile Game/App Support</h3>
-          <p>Keep your published titles stable, profitable, and compliant month after month without maintaining an expensive in-house tech team.</p>
-          <ul class="check-list">
-            <li><strong>SLA-Backed Live Maintenance:</strong> Rapid bug triage, emergency hotfixes, and continuous technical health monitoring.</li>
-            <li><strong>Crash Triage (<0.1% Goal):</strong> Firebase Crashlytics debugging, ANR resolution, and low-RAM memory leak patches.</li>
-            <li><strong>Third-Party SDK Upgrades:</strong> Painless upgrades for AdMob, Firebase, Facebook, and analytics SDKs to prevent store deprecation.</li>
-            <li><strong>Annual OS Compatibility:</strong> Proactive updates for new iOS and Android releases and Unity engine migrations without breaking features.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">LiveOps Support</span>
-            <span class="tag-item">Crashlytics Fixes</span>
-            <span class="tag-item">SDK Upgrades</span>
-            <span class="tag-item">OS Version Updates</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for App & Game Support ↗</a>
-          </div>
-        </div>
-
-        <!-- Supporting Pillar: Technical & Performance -->
-        <div class="card" id="performance">
-          <div class="card-header-row">
-            <div class="service-icon">⚡</div>
-            <span class="card-badge">Engineering Core</span>
-          </div>
-          <h3>Unity & Mobile Performance</h3>
-          <p>The engineering foundation: deep-dive profiling to hit 60 FPS, eliminate GC stutter, and compress build sizes for maximum reach.</p>
-          <ul class="check-list">
-            <li><strong>Frame Rate Stabilization:</strong> Draw call batching, GPU instancing, and URP shader stripping for smooth gameplay.</li>
-            <li><strong>Memory & GC Spike Elimination:</strong> Memory leak identification and garbage collection stutter fixes across lower-tier devices.</li>
-            <li><strong>Build Size Compression:</strong> Asset stripping and compression tuning to stay well under cellular download limits (<100MB).</li>
-            <li><strong>Battery & Thermal Tuning:</strong> Preventing thermal throttling and excessive battery drain on iOS & Android hardware.</li>
-          </ul>
-          <div class="tag-list">
-            <span class="tag-item">Unity Profiling</span>
-            <span class="tag-item">60 FPS Lock</span>
-            <span class="tag-item">Build Compression</span>
-            <span class="tag-item">Thermal Optimization</span>
-          </div>
-          <div class="card-cta">
-            <a class="btn btn-card" href="#contact">Contact for Performance Profiling ↗</a>
+            <!-- Pillar 4: Organic Growth & ASO -->
+            <div class="slider-slide">
+              <div class="card" id="growth">
+                <div id="aso"></div>
+                <div class="card-header-row">
+                  <div class="service-icon">📈</div>
+                  <span class="card-badge">Core Pillar</span>
+                </div>
+                <h3>Organic Growth & ASO (App Store Optimization)</h3>
+                <p>Stop draining marketing budget on paid user acquisition alone. Turn your iOS & Android store pages into compounding organic download engines with data-driven ASO.</p>
+                <ul class="check-list">
+                  <li><strong>Algorithmic Keyword Indexing:</strong> Comprehensive keyword research targeting high-volume, low-competition terms for Apple App Store (100-character field, subtitle) and Google Play (keyword density across Title, Short & Long description).</li>
+                  <li><strong>Store Listing Experiments (A/B Testing):</strong> Statistical CRO experiments on Google Play Console and Apple Product Page Optimization (PPO) to maximize tap-to-install conversion.</li>
+                  <li><strong>Conversion Rate Optimization (CRO):</strong> High-converting visual narratives, icon A/B testing, gameplay screenshots, and promo video thumbnails.</li>
+                  <li><strong>Custom Product Pages (CPP) & Localization:</strong> Segmented Custom Product Pages and multi-language store metadata across US, UK, and global Tier-1 markets.</li>
+                  <li><strong>Ratings & Review Acceleration:</strong> In-app smart review prompt funnels timed to player dopamine peaks, cultivating 4.5+ star social proof that elevates store algorithm rank.</li>
+                </ul>
+                <div class="tag-list">
+                  <span class="tag-item">App Store Optimization (ASO)</span>
+                  <span class="tag-item">Keyword Ranking</span>
+                  <span class="tag-item">Google Play Experiments</span>
+                  <span class="tag-item">Apple PPO & CPP</span>
+                  <span class="tag-item">Conversion Rate (CRO)</span>
+                  <span class="tag-item">Organic Installs</span>
+                </div>
+                <div class="card-cta">
+                  <a class="btn btn-card" href="#contact">Contact for ASO & Organic Growth ↗</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="slider-dots"></div>
       </div>
     </section>
 
@@ -538,7 +513,6 @@
           <button class="tab-button" data-tab="appstore">🍏 App Store Publishing</button>
           <button class="tab-button" data-tab="playstore">🤖 Play Store Publishing</button>
           <button class="tab-button" data-tab="growth">📈 Organic Growth (ASO)</button>
-          <button class="tab-button" data-tab="support">🛠️ Game/App Support</button>
         </div>
 
         <div class="tab-panels">
@@ -735,38 +709,6 @@
               <a class="btn" href="#contact">Contact for ASO Strategy ↗</a>
             </div>
           </div>
-
-          <!-- TAB: SUPPORT -->
-          <div class="tab-panel" id="tab-support">
-            <div class="tab-detail-grid">
-              <div class="tab-box">
-                <h4>🎯 Focus & Objectives</h4>
-                <p>Provide reliable, on-demand technical stewardship so your live game or app stays fast, crash-free, and profitable year-round.</p>
-                <ul class="list">
-                  <li>Active crash monitoring via Firebase Crashlytics with rapid triage</li>
-                  <li>Routine maintenance updates for all advertising, analytics, and attribution SDKs</li>
-                  <li>Annual compatibility updates for upcoming Android and iOS OS updates</li>
-                  <li>Emergency hotfix response SLA to resolve revenue-impacting issues promptly</li>
-                </ul>
-              </div>
-              <div class="tab-box">
-                <h4>📦 Key Deliverables</h4>
-                <ul class="check-list">
-                  <li><strong>99.9% Crash-Free Rate:</strong> Proactive resolution of top crashes and ANRs</li>
-                  <li><strong>SDK Health Audits:</strong> Up-to-date SDK versions compliant with new store rules</li>
-                  <li><strong>Monthly Health Report:</strong> Performance metrics, crash logs, and compliance status</li>
-                  <li><strong>Flexible Monthly Retainer:</strong> Scalable support packages tailored to your project size</li>
-                </ul>
-              </div>
-            </div>
-            <div class="tab-cta-banner">
-              <div class="tab-cta-text">
-                <strong>Need reliable SLA-backed live game maintenance?</strong>
-                <span>Crash reduction, SDK upgrades, and proactive OS updates without hiring in-house.</span>
-              </div>
-              <a class="btn" href="#contact">Inquire About Support Retainers ↗</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -775,66 +717,82 @@
     <section id="portfolio">
       <div class="badge">Case Studies & Outcomes</div>
       <h2>Proven track record of tangible business outcomes.</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="card-header-row">
-            <span class="badge" style="margin:0;">AdMob & Monetization</span>
-            <span style="font-size:0.85rem; color:var(--accent); font-weight:700;">+78% ARPDAU</span>
-          </div>
-          <h3 style="margin-top:10px;">AdMob Bidding & Policy Overhaul</h3>
-          <p>A casual mobile game was suffering from Google ad limits, low eCPMs, and missing mediation.</p>
-          <ul class="list">
-            <li>Integrated AdMob bidding with Unity Ads and AppLovin MAX</li>
-            <li>Resolved invalid traffic flag and lifted ad limits in under 10 days</li>
-            <li>Implemented Google UMP consent framework for full European compliance</li>
-            <li><strong>Result:</strong> +78% ARPDAU growth with zero subsequent policy flags</li>
-          </ul>
-        </div>
+      <div class="slider-wrapper">
+        <button class="slider-nav-arrow prev" aria-label="Previous case studies" title="Previous Slide">❮</button>
+        <button class="slider-nav-arrow next" aria-label="Next case studies" title="Next Slide">❯</button>
 
-        <div class="card">
-          <div class="card-header-row">
-            <span class="badge" style="margin:0;">Dual Store Publishing</span>
-            <span style="font-size:0.85rem; color:var(--accent); font-weight:700;">100% Approval</span>
-          </div>
-          <h3 style="margin-top:10px;">App Store Rejection & 20-Tester Launch</h3>
-          <p>Cross-platform app was stuck in Apple Guideline 4.3 rejection loops and halted by Google’s 20-tester rule.</p>
-          <ul class="list">
-            <li>Refactored UI presentation and compiled required iOS Privacy Manifests</li>
-            <li>Coordinated and executed the 14-day 20-tester closed testing protocol on Google Play</li>
-            <li>Authored compliance-backed appeal letter clearing Apple App Review</li>
-            <li><strong>Result:</strong> Approved on both App Store & Google Play within 16 days</li>
-          </ul>
-        </div>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <div class="slider-slide">
+              <div class="card">
+                <div class="card-header-row">
+                  <span class="badge" style="margin:0;">AdMob & Monetization</span>
+                  <span style="font-size:0.85rem; color:var(--accent); font-weight:700;">+78% ARPDAU</span>
+                </div>
+                <h3 style="margin-top:10px;">AdMob Bidding & Policy Overhaul</h3>
+                <p>A casual mobile game was suffering from Google ad limits, low eCPMs, and missing mediation.</p>
+                <ul class="list">
+                  <li>Integrated AdMob bidding with Unity Ads and AppLovin MAX</li>
+                  <li>Resolved invalid traffic flag and lifted ad limits in under 10 days</li>
+                  <li>Implemented Google UMP consent framework for full European compliance</li>
+                  <li><strong>Result:</strong> +78% ARPDAU growth with zero subsequent policy flags</li>
+                </ul>
+              </div>
+            </div>
 
-        <div class="card">
-          <div class="card-header-row">
-            <span class="badge" style="margin:0;">Organic Growth (ASO)</span>
-            <span style="font-size:0.85rem; color:var(--accent); font-weight:700;">+135% Installs</span>
-          </div>
-          <h3 style="margin-top:10px;">ASO Strategy & Conversion Overhaul</h3>
-          <p>Mobile simulator game was overly reliant on high paid ad spend with negative ROAS and zero organic footprint.</p>
-          <ul class="list">
-            <li>Conducted semantic keyword mapping across US, UK, and Tier-1 European markets</li>
-            <li>Ran Google Play Store Listing Experiments testing 4 screenshot narratives</li>
-            <li>Optimized in-game review prompt triggers after achievement milestones</li>
-            <li><strong>Result:</strong> +135% increase in weekly organic installs; 4.7-star rating with 12k reviews</li>
-          </ul>
-        </div>
+            <div class="slider-slide">
+              <div class="card">
+                <div class="card-header-row">
+                  <span class="badge" style="margin:0;">Dual Store Publishing</span>
+                  <span style="font-size:0.85rem; color:var(--accent); font-weight:700;">100% Approval</span>
+                </div>
+                <h3 style="margin-top:10px;">App Store Rejection & 20-Tester Launch</h3>
+                <p>Cross-platform app was stuck in Apple Guideline 4.3 rejection loops and halted by Google’s 20-tester rule.</p>
+                <ul class="list">
+                  <li>Refactored UI presentation and compiled required iOS Privacy Manifests</li>
+                  <li>Coordinated and executed the 14-day 20-tester closed testing protocol on Google Play</li>
+                  <li>Authored compliance-backed appeal letter clearing Apple App Review</li>
+                  <li><strong>Result:</strong> Approved on both App Store & Google Play within 16 days</li>
+                </ul>
+              </div>
+            </div>
 
-        <div class="card">
-          <div class="card-header-row">
-            <span class="badge" style="margin:0;">Mobile App Support</span>
-            <span style="font-size:0.85rem; color:var(--accent); font-weight:700;"><0.08% Crashes</span>
+            <div class="slider-slide">
+              <div class="card">
+                <div class="card-header-row">
+                  <span class="badge" style="margin:0;">Organic Growth (ASO)</span>
+                  <span style="font-size:0.85rem; color:var(--accent); font-weight:700;">+135% Installs</span>
+                </div>
+                <h3 style="margin-top:10px;">ASO Strategy & Conversion Overhaul</h3>
+                <p>Mobile simulator game was overly reliant on high paid ad spend with negative ROAS and zero organic footprint.</p>
+                <ul class="list">
+                  <li>Conducted semantic keyword mapping across US, UK, and Tier-1 European markets</li>
+                  <li>Ran Google Play Store Listing Experiments testing 4 screenshot narratives</li>
+                  <li>Optimized in-game review prompt triggers after achievement milestones</li>
+                  <li><strong>Result:</strong> +135% increase in weekly organic installs; 4.7-star rating with 12k reviews</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="slider-slide">
+              <div class="card">
+                <div class="card-header-row">
+                  <span class="badge" style="margin:0;">Mobile App Support</span>
+                  <span style="font-size:0.85rem; color:var(--accent); font-weight:700;"><0.08% Crashes</span>
+                </div>
+                <h3 style="margin-top:10px;">LiveOps Maintenance & Crash Reduction</h3>
+                <p>Mid-core Unity title faced high crash spikes on Android 14, outdated analytics, and poor player retention.</p>
+                <ul class="list">
+                  <li>Diagnosed critical memory leaks and JNI bridge exceptions using Firebase Crashlytics</li>
+                  <li>Upgraded AdMob, Facebook SDK, and Firebase plugins to modern compliant versions</li>
+                  <li>Established monthly SLA maintenance routine with proactive OS compatibility checks</li>
+                  <li><strong>Result:</strong> Crash rate slashed from 3.9% to 0.08%; uninterrupted live operation for 12+ months</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <h3 style="margin-top:10px;">LiveOps Maintenance & Crash Reduction</h3>
-          <p>Mid-core Unity title faced high crash spikes on Android 14, outdated analytics, and poor player retention.</p>
-          <ul class="list">
-            <li>Diagnosed critical memory leaks and JNI bridge exceptions using Firebase Crashlytics</li>
-            <li>Upgraded AdMob, Facebook SDK, and Firebase plugins to modern compliant versions</li>
-            <li>Established monthly SLA maintenance routine with proactive OS compatibility checks</li>
-            <li><strong>Result:</strong> Crash rate slashed from 3.9% to 0.08%; uninterrupted live operation for 12+ months</li>
-          </ul>
         </div>
+        <div class="slider-dots"></div>
       </div>
       <div style="text-align:center; margin-top:28px;">
         <a class="btn" href="#contact">Discuss Your Project or Case Study ↗</a>
@@ -845,23 +803,39 @@
     <section id="testimonials">
       <div class="badge">Testimonials</div>
       <h2>Trusted by founders, producers, and developers worldwide.</h2>
-      <div class="grid">
-        <div class="quote">
-          <p>“Vikas overhauled our AdMob mediation and resolved our ad-serving limits within two weeks. Our ad revenue increased by nearly 80% without damaging player retention.”</p>
-          <small>– Studio Lead, Casual Game Publisher</small>
+      <div class="slider-wrapper">
+        <button class="slider-nav-arrow prev" aria-label="Previous testimonials" title="Previous Slide">❮</button>
+        <button class="slider-nav-arrow next" aria-label="Next testimonials" title="Next Slide">❯</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <div class="slider-slide">
+              <div class="quote">
+                <p>“Vikas overhauled our AdMob mediation and resolved our ad-serving limits within two weeks. Our ad revenue increased by nearly 80% without damaging player retention.”</p>
+                <small>– Studio Lead, Casual Game Publisher</small>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="quote">
+                <p>“We were completely stuck between Apple's Guideline 4.3 rejection and Google’s new 20-tester rule. Vikas guided us step-by-step and got both versions approved on schedule.”</p>
+                <small>– Co-Founder, Health & Utility App</small>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="quote">
+                <p>“His ASO keyword revamp and screenshot A/B testing transformed our organic traffic. We saw a 130%+ spike in organic downloads without touching our marketing budget.”</p>
+                <small>– Growth Lead, Mobile Simulator Game</small>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="quote">
+                <p>“Having Vikas manage our ongoing app support and SDK updates gives our team complete peace of mind. Zero crash headaches and seamless iOS/Android transitions.”</p>
+                <small>– Technical Director, Cross-Platform Title</small>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="quote">
-          <p>“We were completely stuck between Apple's Guideline 4.3 rejection and Google’s new 20-tester rule. Vikas guided us step-by-step and got both versions approved on schedule.”</p>
-          <small>– Co-Founder, Health & Utility App</small>
-        </div>
-        <div class="quote">
-          <p>“His ASO keyword revamp and screenshot A/B testing transformed our organic traffic. We saw a 130%+ spike in organic downloads without touching our marketing budget.”</p>
-          <small>– Growth Lead, Mobile Simulator Game</small>
-        </div>
-        <div class="quote">
-          <p>“Having Vikas manage our ongoing app support and SDK updates gives our team complete peace of mind. Zero crash headaches and seamless iOS/Android transitions.”</p>
-          <small>– Technical Director, Cross-Platform Title</small>
-        </div>
+        <div class="slider-dots"></div>
       </div>
     </section>
 
@@ -869,43 +843,64 @@
     <section id="faq">
       <div class="badge">FAQ</div>
       <h2>Frequently Asked Questions</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>Do you build full games or embed as a Senior Unity Engineer?</strong>
-          <p>Both. I can build full titles and vertical slices from greenfield to release, develop core gameplay systems (combat, character controllers, physics, multiplayer), or embed directly with your engineering team as a Senior Unity Engineer to accelerate your milestone velocity.</p>
+
+      <div class="slider-wrapper">
+        <button class="slider-nav-arrow prev" aria-label="Previous FAQs" title="Previous Slide">❮</button>
+        <button class="slider-nav-arrow next" aria-label="Next FAQs" title="Next Slide">❯</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <div class="slider-slide">
+              <div class="card">
+                <strong>Do you build full games or embed as a Senior Unity Engineer?</strong>
+                <p>Both. I can build full titles and vertical slices from greenfield to release, develop core gameplay systems (combat, character controllers, physics, multiplayer), or embed directly with your engineering team as a Senior Unity Engineer to accelerate your milestone velocity.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>What does a Unity Code Review & Architecture Audit include?</strong>
+                <p>I perform a deep, comprehensive audit of your Unity codebase. You receive an actionable report covering architectural anti-patterns, memory leak locations, garbage collection spikes, tight coupling risks, and a prioritized refactoring roadmap along with PR review standards for your team.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>How do you help with AdMob consultancy and policy compliance?</strong>
+                <p>I audit your existing ad waterfall, configure real-time bidding mediation (AppLovin, IronSource, Unity), optimize placement frequencies to maximize eCPM/ARPDAU, and implement Google UMP consent to resolve ad limits and policy warnings.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>Can you resolve Apple App Store rejections?</strong>
+                <p>Yes. I frequently resolve tough rejections including Guideline 4.3 (Design/Spam), 2.1 (App Completeness), and 5.1.1 (Privacy). I provide code refactoring, Apple Privacy Manifests (<code>PrivacyInfo.xcprivacy</code>), and professional appeal documentation.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>How do you handle Google Play’s 20-tester / 14-day closed testing rule?</strong>
+                <p>I help you structure, recruit, and manage the closed testing track with active testers, monitor telemetry, verify compliance feedback, and prepare the submission questionnaire so Google unlocks production access on the first review.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>What does your Organic Growth (ASO) service include?</strong>
+                <p>I conduct in-depth keyword analysis, optimize your store title, subtitle, and descriptions for both stores, design high-converting screenshot narratives, run A/B listing experiments, and implement smart in-app review prompts.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>How do you optimize Unity games to achieve a stable 60 FPS?</strong>
+                <p>I profile code using the Unity Profiler and Memory Profiler to eliminate Garbage Collection spikes, optimize draw calls via GPU instancing and SRP batcher, tune physics simulation steps, and compress textures to guarantee smooth 60 FPS performance on iOS & Android.</p>
+              </div>
+            </div>
+            <div class="slider-slide">
+              <div class="card">
+                <strong>Do you work under NDA and maintain confidentiality?</strong>
+                <p>Absolutely. NDAs and secure access protocols are standard practice. I work directly in your private repositories with least-privilege access and maintain complete confidentiality.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <strong>What does a Unity Code Review & Architecture Audit include?</strong>
-          <p>I perform a deep, comprehensive audit of your Unity codebase. You receive an actionable report covering architectural anti-patterns, memory leak locations, garbage collection spikes, tight coupling risks, and a prioritized refactoring roadmap along with PR review standards for your team.</p>
-        </div>
-        <div class="card">
-          <strong>How do you help with AdMob consultancy and policy compliance?</strong>
-          <p>I audit your existing ad waterfall, configure real-time bidding mediation (AppLovin, IronSource, Unity), optimize placement frequencies to maximize eCPM/ARPDAU, and implement Google UMP consent to resolve ad limits and policy warnings.</p>
-        </div>
-        <div class="card">
-          <strong>Can you resolve Apple App Store rejections?</strong>
-          <p>Yes. I frequently resolve tough rejections including Guideline 4.3 (Design/Spam), 2.1 (App Completeness), and 5.1.1 (Privacy). I provide code refactoring, Apple Privacy Manifests (<code>PrivacyInfo.xcprivacy</code>), and professional appeal documentation.</p>
-        </div>
-        <div class="card">
-          <strong>How do you handle Google Play’s 20-tester / 14-day closed testing rule?</strong>
-          <p>I help you structure, recruit, and manage the closed testing track with active testers, monitor telemetry, verify compliance feedback, and prepare the submission questionnaire so Google unlocks production access on the first review.</p>
-        </div>
-        <div class="card">
-          <strong>What does your Organic Growth (ASO) service include?</strong>
-          <p>I conduct in-depth keyword analysis, optimize your store title, subtitle, and descriptions for both stores, design high-converting screenshot narratives, run A/B listing experiments, and implement smart in-app review prompts.</p>
-        </div>
-        <div class="card">
-          <strong>What is included in your Mobile Game/App Support package?</strong>
-          <p>Ongoing post-launch maintenance covers Firebase Crashlytics monitoring, ANR & crash triage, third-party SDK upgrades (AdMob, Firebase, Facebook), annual iOS & Android OS compatibility updates, and emergency hotfixes under an SLA.</p>
-        </div>
-        <div class="card">
-          <strong>Do you work under NDA and maintain confidentiality?</strong>
-          <p>Absolutely. NDAs and secure access protocols are standard practice. I work directly in your private repositories with least-privilege access and maintain complete confidentiality.</p>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:28px;">
-        <p style="margin-bottom:12px; font-size:1.05rem;">Have a specific challenge or custom question?</p>
-        <a class="btn" href="#contact">Ask Vikas Directly via Contact Form ↗</a>
+        <div class="slider-dots"></div>
       </div>
     </section>
 
@@ -917,8 +912,7 @@
       <p style="font-size:1.05rem;">Whether you need an AdMob revenue audit, store publishing clearance, an organic growth plan, or ongoing technical support — <strong>please use the given Google link to contact me</strong>.</p>
 
       <div class="grid" style="margin-top:24px;">
-        <!-- Primary Card: Google Form Direct Link -->
-        <div class="card card-featured">
+        <div class="card">
           <div class="card-header-row">
             <h3>Contact via Google Link</h3>
             <span class="card-badge">Primary Channel</span>
@@ -936,12 +930,6 @@
             <li><strong>Direct delivery:</strong> Logged directly to Vikas Patel's dashboard</li>
             <li><strong>Fast turnaround:</strong> Guaranteed response within 24 hours</li>
           </ul>
-
-          <div style="margin-top:auto; padding-top:16px;">
-            <span style="font-size:0.85rem; color:var(--muted); display:block; word-break:break-all;">
-              Direct URL: <a href="https://docs.google.com/forms/d/e/1FAIpQLScEAsJOssyNZf0gEyk_NakdLEeFZ7IAmjTBvS-QmPIU_UPLbg/viewform" target="_blank" rel="noopener noreferrer" style="color:var(--accent); text-decoration:underline;">https://docs.google.com/forms/d/e/1FAIpQLSc...</a>
-            </span>
-          </div>
         </div>
 
         <!-- Secondary Card: Email & Booking -->
@@ -980,6 +968,36 @@
   </footer>
 
   <script>
+    // Mobile navigation menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close mobile menu when any nav link is tapped
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close menu when tapping outside the navbar
+      document.addEventListener('click', (e) => {
+        if (!navToggle.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('open')) {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
     // Intersection-based reveal for sections
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver((entries) => {
@@ -1002,6 +1020,7 @@
         tabPanels.forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
         panel.classList.add('active');
+        btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
       }
     }
 
@@ -1011,6 +1030,201 @@
         activateTabByKey(key);
       });
     });
+
+    // Universal Horizontal Carousel Slider (Glitch-Free Transform with Infinite Looping)
+    function initCarousel(wrapper) {
+      const track = wrapper.querySelector('.slider-track');
+      const prevBtn = wrapper.querySelector('.slider-nav-arrow.prev');
+      const nextBtn = wrapper.querySelector('.slider-nav-arrow.next');
+      const dotsContainer = wrapper.querySelector('.slider-dots');
+      if (!track) return null;
+
+      const slides = Array.from(track.querySelectorAll('.slider-slide'));
+      if (slides.length === 0) return null;
+
+      let currentIndex = 0;
+      let isAnimating = false;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 640) return 1;
+        if (window.innerWidth <= 980) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, slides.length - getVisibleCount());
+      }
+
+      function getPageIndices() {
+        const visible = getVisibleCount();
+        const maxIdx = getMaxIndex();
+        const pageCount = Math.ceil(slides.length / visible);
+        const indices = [];
+        for (let i = 0; i < pageCount; i++) {
+          indices.push(Math.min(i * visible, maxIdx));
+        }
+        return [...new Set(indices)];
+      }
+
+      function updateDots() {
+        if (!dotsContainer) return;
+        const pageIndices = getPageIndices();
+        dotsContainer.innerHTML = '';
+        if (pageIndices.length <= 1) {
+          dotsContainer.style.display = 'none';
+          return;
+        }
+        dotsContainer.style.display = 'flex';
+
+        let activeIdx = 0;
+        let minDiff = Infinity;
+        pageIndices.forEach((pIdx, idx) => {
+          const diff = Math.abs(pIdx - currentIndex);
+          if (diff < minDiff) {
+            minDiff = diff;
+            activeIdx = idx;
+          }
+        });
+
+        pageIndices.forEach((pIdx, i) => {
+          const dot = document.createElement('button');
+          dot.classList.add('slider-dot');
+          dot.setAttribute('aria-label', `Go to slide page ${i + 1}`);
+          if (i === activeIdx) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            if (isAnimating) return;
+            isAnimating = true;
+            currentIndex = pIdx;
+            renderSlide();
+            setTimeout(() => { isAnimating = false; }, 460);
+          });
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      function syncDots() {
+        if (!dotsContainer) return;
+        const pageIndices = getPageIndices();
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        let activeIdx = 0;
+        let minDiff = Infinity;
+        pageIndices.forEach((pIdx, idx) => {
+          const diff = Math.abs(pIdx - currentIndex);
+          if (diff < minDiff) {
+            minDiff = diff;
+            activeIdx = idx;
+          }
+        });
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === activeIdx);
+        });
+      }
+
+      function renderSlide() {
+        const slide = slides[0];
+        if (!slide) return;
+        const slideWidth = slide.getBoundingClientRect().width;
+        const computedGap = parseFloat(window.getComputedStyle(track).gap) || 20;
+        const offset = currentIndex * (slideWidth + computedGap);
+        track.style.transform = `translateX(-${offset}px)`;
+        syncDots();
+      }
+
+      function goNext() {
+        if (isAnimating) return;
+        isAnimating = true;
+        const maxIdx = getMaxIndex();
+        const pageIndices = getPageIndices();
+
+        if (currentIndex >= maxIdx) {
+          currentIndex = 0; // Infinite loop back to beginning
+        } else {
+          const nextIdx = pageIndices.find(p => p > currentIndex);
+          currentIndex = (nextIdx !== undefined) ? nextIdx : 0;
+        }
+        renderSlide();
+        setTimeout(() => { isAnimating = false; }, 460);
+      }
+
+      function goPrev() {
+        if (isAnimating) return;
+        isAnimating = true;
+        const maxIdx = getMaxIndex();
+        const pageIndices = getPageIndices();
+
+        if (currentIndex <= 0) {
+          currentIndex = maxIdx; // Infinite loop back to end
+        } else {
+          const prevIndices = pageIndices.filter(p => p < currentIndex);
+          currentIndex = prevIndices.length > 0 ? prevIndices[prevIndices.length - 1] : maxIdx;
+        }
+        renderSlide();
+        setTimeout(() => { isAnimating = false; }, 460);
+      }
+
+      function goToIndex(index) {
+        const maxIdx = getMaxIndex();
+        currentIndex = Math.max(0, Math.min(index, maxIdx));
+        renderSlide();
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', goNext);
+      if (prevBtn) prevBtn.addEventListener('click', goPrev);
+
+      // Touch / Swipe support for mobile
+      let touchStartX = 0;
+      let touchStartY = 0;
+      track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+
+      track.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].screenX;
+        const touchEndY = e.changedTouches[0].screenY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+        if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX > 0) goNext();
+          else goPrev();
+        }
+      }, { passive: true });
+
+      function handleResize() {
+        const maxIdx = getMaxIndex();
+        currentIndex = Math.min(currentIndex, maxIdx);
+        if (prevBtn) prevBtn.style.display = maxIdx > 0 ? '' : 'none';
+        if (nextBtn) nextBtn.style.display = maxIdx > 0 ? '' : 'none';
+        updateDots();
+        renderSlide();
+      }
+
+      window.addEventListener('resize', handleResize);
+      handleResize();
+
+      const instance = { slides, goToIndex, renderSlide };
+      wrapper._carousel = instance;
+      return instance;
+    }
+
+    // Initialize all carousels on page
+    document.querySelectorAll('.slider-wrapper').forEach(wrapper => {
+      initCarousel(wrapper);
+    });
+
+    // Helper to scroll internal carousel to target element
+    function slideToElement(element) {
+      if (!element) return;
+      const slide = element.closest('.slider-slide');
+      if (!slide) return;
+      const wrapper = slide.closest('.slider-wrapper');
+      if (!wrapper || !wrapper._carousel) return;
+      const slides = wrapper._carousel.slides;
+      const slideIndex = slides.indexOf(slide);
+      if (slideIndex !== -1) {
+        wrapper._carousel.goToIndex(slideIndex);
+      }
+    }
 
     // Alias mapping for tabs and services
     const tabAliases = {
@@ -1049,6 +1263,8 @@
           activateTabByKey(tabAliases[hash]);
         }
         
+        slideToElement(target);
+
         const parentSec = target.closest('section');
         if (parentSec) parentSec.classList.add('visible');
         
@@ -1071,6 +1287,7 @@
       const target = document.getElementById(hash) || 
                      (tabAliases[hash] ? document.getElementById('tab-' + tabAliases[hash]) : null);
       if (target) {
+        slideToElement(target);
         const parentSec = target.closest('section');
         if (parentSec) parentSec.classList.add('visible');
         setTimeout(() => {
