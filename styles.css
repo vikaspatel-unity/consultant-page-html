@@ -1,7 +1,7 @@
 :root {
   --primary: #8b5cf6;
   --primary-dark: #5b21b6;
-  --accent: #f5c268;
+  --accent: #a78bfa;
   --bg: #0b0d14;
   --card: #101424;
   --card-soft: #151a2c;
@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
   background: radial-gradient(circle at 20% 20%, rgba(139,92,246,0.12), transparent 40%),
-              radial-gradient(circle at 80% 0%, rgba(245,194,104,0.08), transparent 35%),
+              radial-gradient(circle at 80% 0%, rgba(167,139,250,0.1), transparent 35%),
               var(--bg);
   color: var(--text);
   overflow-x: hidden;
@@ -135,6 +135,22 @@ button, .btn, .pill, .tab-button, input[type="button"], input[type="submit"] {
 .btn:hover { transform: translateY(-2px); color: #ffffff !important; box-shadow: 0 14px 40px rgba(139,92,246,0.45); }
 .ghost { background: rgba(255,255,255,0.04); color: #ffffff !important; box-shadow: none; border-color: rgba(255,255,255,0.15); }
 .ghost:hover { background: rgba(255,255,255,0.08); color: #ffffff !important; }
+.btn-booking {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9) !important;
+  color: #ffffff !important;
+  font-size: 1.02rem;
+  padding: 15px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-booking:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.8), 0 10px 30px rgba(0,0,0,0.5);
+  color: #ffffff !important;
+}
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-top: 26px; }
 .stat { padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--card-soft); }
 .stat strong { display: block; font-size: 1.4rem; color: #fff; }
@@ -180,9 +196,9 @@ button, .btn, .pill, .tab-button, input[type="button"], input[type="submit"] {
   font-weight: 700;
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(245,194,104,0.15);
+  background: rgba(167,139,250,0.15);
   color: var(--accent);
-  border: 1px solid rgba(245,194,104,0.25);
+  border: 1px solid rgba(167,139,250,0.25);
 }
 .tag-list {
   display: flex;
@@ -213,7 +229,7 @@ button, .btn, .pill, .tab-button, input[type="button"], input[type="submit"] {
   text-align: center;
   gap: 8px;
 }
-.badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(245,194,104,0.16); color: #f5c268; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(167,139,250,0.16); color: #a78bfa; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.92rem; margin-bottom: 8px; border: 1px solid rgba(167,139,250,0.25); }
 .list { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
 .list li { margin: 8px 0; }
 .check-list {
